@@ -49,6 +49,59 @@ const routes = [
     name: 'Register',
     component: () => import('../views/Register.vue'),
   },
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: () => import('../views/Admin.vue'),
+    redirect: '/admin/user',
+    children: [
+      {
+        path: 'song',
+        name: 'AdminSong',
+        component: () => import('../views/AdminSong.vue')
+      },
+      {
+        path: 'singer',
+        name: 'AdminSinger',
+        component: () => import('../views/AdminSinger.vue'),
+      },
+      {
+        path: 'songList',
+        name: 'AdminSongList',
+        component: () => import('../views/AdminSongList.vue'),
+      },
+      {
+        path: 'user',
+        name: 'AdminUser',
+        component: () => import('../views/AdminUser.vue'),
+      },
+      {
+        path: 'singerUpdate',
+        name: 'AdminSingerUpdate',
+        component: () => import('../views/AdminSingerUpdate.vue'),
+      },
+      {
+        path: 'songUpdate',
+        name: 'AdminSongUpdate',
+        component: () => import('../views/AdminSongUpdate.vue'),
+      },
+      {
+        path: 'songListUpdate',
+        name: 'AdminSongListUpdate',
+        component: () => import('../views/AdminSongListUpdate.vue'),
+      },
+      {
+        path: 'detail',
+        name: 'AdminDetail',
+        component: () => import('../views/AdminDetail.vue'),
+      },
+    ]
+  },
+  {
+    path: '/adminLogin',
+    name: 'AdminLogin',
+    component: () => import('../views/AdminLogin.vue'),
+  },
 ]
 
 const router = createRouter({

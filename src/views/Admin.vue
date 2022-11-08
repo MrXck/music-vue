@@ -1,0 +1,1 @@
+<template>    <AdminMenu/></template><script>import AdminMenu from '../components/AdminMenu'export default {    name: 'Admin',    components: {AdminMenu},}</script><style scoped></style>
